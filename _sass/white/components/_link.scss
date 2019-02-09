@@ -1,0 +1,11 @@
+a {
+  color: $main;
+  text-decoration: none;
+  border-bottom: 1px solid $white;
+}
+a:hover, a.active:hover {
+  border-bottom: 1px dashed;
+}
+a.active {
+  border-bottom: 1px solid;
+}

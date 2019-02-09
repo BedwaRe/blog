@@ -1,0 +1,50 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700|Jura&subset=cyrillic');
+
+// Viewports
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Colors
+$main: #4F4F4F;
+$background: #F2F2F2;
+$shadow: #e5e5e5;
+$separator: #E0E0E0;
+$tag: #56CCF2;
+//---------
+$purple: #6f42c1;
+$white: #fff;
+
+// Global
+$default-font: 'Cormorant Garamond', serif;
+$secondary-font: 'Jura', serif;
+$default-font-size: 20px;
+$content-width: 800px;
+
+$mobile-default-margin: 10px;
+$desktop-default-margin: 40px;
+$mobile-secondary-margin: 10px;
+$desktop-secondary-margin: $mobile-secondary-margin;
+
+// Header
+$desktop-header-height: 120px;
+$mobile-header-height: 60px;
+$desktop-header-link-height: 24px;
+$mobile-header-link-height: 20px;
+
+// Content
+$mobile-post-header-font-size: 30px;
+$desktop-post-header-font-size: 36px;
+$mobile-post-time-font-size: 14px;
+
+// Footer
+$mobile-footer-height: $mobile-header-height;
+$default-footer-font-size: 18px;
+
+// Components
+$default-button-height: 30px;
+$default-icon-height-and-weight: $default-button-height;
+

@@ -1,0 +1,17 @@
+i {
+  height: $default-icon-height-and-weight;
+  width: $default-icon-height-and-weight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+}
+
+i.icon-search {
+  background: url(/assets/icons/search.svg);
+}
+
+i.icon-menu {
+  background: url(/assets/icons/menu.svg);
+}

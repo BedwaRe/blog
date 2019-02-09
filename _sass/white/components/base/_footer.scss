@@ -1,0 +1,31 @@
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 $mobile-default-margin;
+  z-index: 1;
+  background: $white;
+  height: $mobile-footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    height: $mobile-footer-height;
+    width: 100%;
+    display: block;
+    background: $white;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 4px #e5e5e5;
+  }
+}
+
+// Styles for PC
+@media all and (min-width: $breakpoint-md) {
+  footer {
+    max-width: $content-width;
+    padding: 0 $desktop-default-margin;
+  }
+}

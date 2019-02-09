@@ -13,32 +13,47 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Programming Hardcore
-author: bedware
+title: Пишу о разработке
+author: Дмитрий Сурин
 email: dmitry.surin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Важная мета инфа для поисковых роботов.
+  Интересное в мире разработки. Чистый код, архитектура, разработка и тестирование.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: :year/:month/:day/:title.html
 encoding: utf-8
-# twitter_username: jekyllrb
-github_username:  bedware
+date_format: "%d-%m-%Y"
+
+# Links
+twitter_username: BedwaRe
+github_username: bedware
+show_excerpts: true
+
+menu:
+  - name: Блог
+    url: /
+  - name: Переводы
+    url: /translations/
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+
+# Plugins
+#google_analytics: UA-NNNNNNNN-N
+disqus:
+  shortname: bedware
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.md

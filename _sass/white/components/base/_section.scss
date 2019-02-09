@@ -1,0 +1,16 @@
+section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: $mobile-default-margin;
+  flex-grow: 1;
+  background: $white;
+  box-shadow: 0 0 4px $shadow;
+}
+
+// Styles for PC
+@media all and (min-width: $breakpoint-md) {
+  section {
+    max-width: $content-width;
+    padding: $desktop-default-margin;
+  }
+}

@@ -1,0 +1,19 @@
+html {
+  color: $main;
+  font-family: $default-font;
+  font-size: $default-font-size;
+  background: $background;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+b, strong {
+  color: black;
+  font-size: 1.2rem;
+}

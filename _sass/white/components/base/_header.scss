@@ -1,0 +1,99 @@
+header .header-right, header .header-left {
+  display: none;
+}
+
+header {
+  background: $white;
+  height: $mobile-header-height;
+  padding: 0 $mobile-default-margin;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-left, .header-right {
+    flex-basis: 50%;
+    display: flex;
+  }
+
+  .header-left {
+    justify-content: flex-start;
+  }
+
+  .logo, .logo img {
+    height: 50px;
+  }
+  .logo {
+    display: none;
+  }
+
+  .header-right {
+    justify-content: flex-end;
+  }
+
+  &:before {
+    content: "";
+    height: $mobile-header-height;
+    width: 100%;
+    display: block;
+    background: $white;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 4px #e5e5e5;
+  }
+}
+
+/* MEDIA */
+// Styles for tablet
+@media all and (min-width: $breakpoint-sm) {
+  header {
+    .menu-button{
+      display: none;
+    }
+
+    .header-right, .header-left {
+      display: flex;
+    }
+
+    .header-left > *, .header-right > * {
+      margin: 0 10px;
+    }
+
+    .header-left > a:first-of-type {
+      margin-left: 0;
+    }
+
+    .header-right > *:last-child {
+      margin-right: 0;
+    }
+
+    .logo {
+      display: block;
+    }
+  }
+}
+
+// Styles for PC
+@media all and (min-width: $breakpoint-md) {
+  header {
+    height: $desktop-header-height;
+    max-width: $content-width;
+    padding: 0 $desktop-default-margin;
+
+    &:before {
+      height: $desktop-header-height;
+    }
+
+    .logo, .logo img {
+      height: 110px;
+    }
+
+    a {
+      font-size: $desktop-header-link-height;
+    }
+  }
+}

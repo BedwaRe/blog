@@ -1,0 +1,53 @@
+.post {
+  margin-bottom: $desktop-default-margin;
+
+  .post-header-title, .post-header-time, .separator {
+    margin-bottom: $mobile-default-margin;
+  }
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    .post-header-title {
+      font-size: $mobile-post-header-font-size;
+      font-weight: bold;
+      margin-right: $mobile-default-margin;
+    }
+    .post-header-time {
+      font-family: $secondary-font;
+      font-size: $mobile-post-time-font-size;
+    }
+    .post-header-author {
+      flex-basis: 100%;
+      margin-bottom: $mobile-default-margin;
+    }
+  }
+  .post-tags {
+    display: flex;
+    flex-flow: row wrap;
+
+    .post-tag {
+      background: $tag;
+      padding: 0 $mobile-default-margin;
+      color: $white;
+      margin-right: $mobile-default-margin;
+      margin-bottom: $mobile-default-margin;
+    }
+  }
+  .post-content {
+    text-align: left;
+  }
+  .post-footer {
+    margin-top: $desktop-secondary-margin;
+  }
+}
+
+/* MEDIA */
+// Styles for tablet
+@media all and (min-width: $breakpoint-sm) {
+  .post .post-content {
+    text-align: justify;
+  }
+}

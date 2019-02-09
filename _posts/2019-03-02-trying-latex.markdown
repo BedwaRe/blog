@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Trying Latex"
-date:   2018-03-02 05:17:09 +0300
-categories: jekyll hello
+title:  "Trying Latexs"
+date:   2019-03-02 05:17:09 +0300
 ---
 МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ  
 РОССИЙСКОЙ ФЕДЕРАЦИИ
