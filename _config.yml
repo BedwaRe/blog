@@ -19,14 +19,10 @@ email: dmitry.surin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Интересное в мире разработки. Чистый код, архитектура, разработка и тестирование.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://surin.blog" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: :year/:month/:day/:title.html
 encoding: utf-8
 date_format: "%d-%m-%Y"
-
-# Links
-twitter_username: BedwaRe
-github_username: bedware
 show_excerpts: true
 
 menu:
@@ -34,6 +30,10 @@ menu:
     url: /
 #  - name: Переводы
 #    url: /translations/
+
+# Links
+twitter_username: BedwaRe
+github_username: bedware
 
 # Build settings
 markdown: kramdown
