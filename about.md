@@ -6,7 +6,7 @@ description: |
     Описание для странички обо мне
 ---
 
-Что-то обо мне по этой [ссылке](http://localhost:3000/about/)
+Что-то обо мне по этой [ссылке](/about/)
 
 Больше примеров:
 [jekyll][jekyll-organization] /
