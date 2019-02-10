@@ -32,8 +32,8 @@ show_excerpts: true
 menu:
   - name: Блог
     url: /
-  - name: Переводы
-    url: /translations/
+#  - name: Переводы
+#    url: /translations/
 
 # Build settings
 markdown: kramdown
@@ -41,9 +41,8 @@ plugins:
   - jekyll-feed
 
 # Plugins
-#google_analytics: UA-NNNNNNNN-N
-disqus:
-  shortname: bedware
+google_analytics: UA-134200140-1
+disqus_shortname: bedware
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
