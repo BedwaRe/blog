@@ -1,21 +1,20 @@
-<div class="overflow-menu">
-    <div class="overflow-menu__row" onclick="$('.overflow-menu').hide();$('.menu-button').show();">
-        <div class="overflow-menu__row-icon-column"><i class="icon-menu"></i></div>
-        <div class="overflow-menu__row-title-column logo"><img src="/assets/images/avatar.png" alt="Avatar"></div>
-        <div class="overflow-menu__row-icon-column"><i></i></div>
-    </div>
-    <div class="separator"></div>
-    {% for item in site.menu %}
-        <div class="overflow-menu__row">
-            <div class="overflow-menu__row-icon-column"><i>●</i></div>
-            <div class="overflow-menu__row-title-column"><a href="{{item.url}}" class="{% if page.url == {{item.url}} %} active {% endif %}">{{item.name}}</a></div>
-            <!--<div class="overflow-menu__row-icon-column"><i><img src="/assets/icons/rss.svg" alt="My blog"></i></div>-->
-        </div>
-    {% endfor %}
-</div>
 <header>
-    <div class="menu-button" onclick="$('.overflow-menu').show();$('.menu-button').hide();">
-        <i class="icon-menu"></i>
+    <!--onclick="$('.wrapper-menu').toggleClass('wrapper-menu-toggle');"-->
+    <div class="menu-button">
+        <label for="burger-menu">
+            <i class="icon-menu"></i>
+        </label>
+        <input type="checkbox" id="burger-menu">
+        <div class="wrapper-menu">
+            {% for item in site.menu %}
+            <div class="overflow-menu__row">
+                <div class="overflow-menu__row-icon-column"><i>●</i></div>
+                <div class="overflow-menu__row-title-column"><a href="{{item.url}}" class="{% if page.url == {{item.url}} %} active {% endif %}">{{item.name}}</a></div>
+                <!--<div class="overflow-menu__row-icon-column"><i><img src="/assets/icons/rss.svg" alt="My blog"></i></div>-->
+            </div>
+            {% endfor %}
+        </div>
+        <!--onclick="$('.overflow-menu').toggleClass('hidden');$('.menu-button').toggleClass('hidden');"-->
     </div>
     <div class="header-left">
         <!--<a href="#1"><i class="icon-search"></i></a>-->
