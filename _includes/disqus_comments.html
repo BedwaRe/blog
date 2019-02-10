@@ -3,8 +3,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.url | absolute_url }}';
+      let sitename = 'http://surin.blog';
+      this.page.url = sitename + '{{ page.url | absolute_url }}';
+      this.page.identifier = sitename + '{{ page.url | absolute_url }}';
 
       console.log(this.page.url);
       console.log(this.page.identifier);
