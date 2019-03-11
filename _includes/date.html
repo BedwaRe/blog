@@ -1,0 +1,29 @@
+{% assign month = page.date | date: '%m' %}
+{{ page.date | date: '%d' }}
+{% case month %}
+    {% when '01' %}
+    Января
+    {% when '02' %}
+    Февраля
+    {% when '03' %}
+    Марта
+    {% when '04' %}
+    Апреля
+    {% when '05' %}
+    Мая
+    {% when '06' %}
+    Июня
+    {% when '07' %}
+    Июля
+    {% when '08' %}
+    Августа
+    {% when '09' %}
+    Сентября
+    {% when '10' %}
+    Октября
+    {% when '11' %}
+    Ноября
+    {% when '12' %}
+    Декабря
+{% endcase %}
+{{ page.date | date: '%Y' }}

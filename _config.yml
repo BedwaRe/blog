@@ -1,39 +1,28 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# General
 title: Пишу о разработке
-author: Дмитрий Сурин
+author: Dmitry Surin
 email: dmitry.surin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Интересное в мире разработки. Чистый код, архитектура, разработка и тестирование.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://surin.blog" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: :year/:month/:day/:title.html
+url: "https://surin.blog" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:categories/:year/:title/
 encoding: utf-8
-date_format: "%d-%m-%Y"
 show_excerpts: true
+excerpt_separator: <!--more-->
 
 menu:
   - name: Блог
     url: /
-#  - name: Переводы
-#    url: /translations/
+  - name: Переводы
+    url: /translations/
+  - name: Обо мне
+    url: /about/
 
 # Links
 twitter_username: BedwaRe
 github_username: bedware
+stackoverflow_id: 8413677
 
 # Build settings
 markdown: kramdown

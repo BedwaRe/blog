@@ -5,6 +5,10 @@ section {
   flex-grow: 1;
   background: $white;
   box-shadow: 0 0 4px $shadow;
+
+  p:first-of-type {
+    margin-top: 10px;
+  }
 }
 
 // Styles for PC
@@ -12,5 +16,9 @@ section {
   section {
     max-width: $content-width;
     padding: $desktop-default-margin;
+
+    p:first-of-type {
+      margin-top: 0;
+    }
   }
 }

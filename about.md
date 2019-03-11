@@ -6,10 +6,5 @@ description: |
     Описание для странички обо мне
 ---
 
-Что-то обо мне по этой [ссылке](/about/)
-
-Больше примеров:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-[jekyll-organization]: https://github.com/jekyll
+Привет! Я **Дмитрий Сурин** - создатель этого блога.
+Последние несколько лет я занимаюсь коммерческой разработкой ПО в веб направлении.

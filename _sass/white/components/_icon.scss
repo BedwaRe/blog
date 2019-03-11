@@ -6,12 +6,15 @@ i {
   align-items: center;
   text-align: center;
   font-style: normal;
+  &:hover {
+    background: whitesmoke;
+  }
 }
 
 i.icon-search {
-  background: url(/assets/icons/search.svg);
+  background: url(/assets/icons/search.svg) content-box;
 }
 
 i.icon-menu {
-  background: url(/assets/icons/menu.svg);
+  background: url(/assets/icons/menu.svg) content-box;
 }

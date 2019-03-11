@@ -1,0 +1,17 @@
+{% capture time %}{{ page.content | number_of_words | divided_by: 270.0 | ceil }}{% endcapture %}
+{% if time == '1' %}
+одну минуту
+{% else %}
+{% case time %}
+{% when '2' %}
+две минуты
+{% when '3' %}
+три минуты
+{% when '4' %}
+четыре минуты
+{% when '5' %}
+пять минут
+{% else %}
+{{ time }} минут
+{% endcase %}
+{% endif %}

@@ -1,5 +1,4 @@
 <header>
-    <!--onclick="$('.wrapper-menu').toggleClass('wrapper-menu-toggle');"-->
     <div class="menu-button">
         <label for="burger-menu">
             <i class="icon-menu"></i>
@@ -9,24 +8,25 @@
             {% for item in site.menu %}
             <div class="overflow-menu__row">
                 <div class="overflow-menu__row-icon-column"><i>●</i></div>
-                <div class="overflow-menu__row-title-column"><a href="{{item.url}}" class="{% if page.url == {{item.url}} %} active {% endif %}">{{item.name}}</a></div>
-                <!--<div class="overflow-menu__row-icon-column"><i><img src="/assets/icons/rss.svg" alt="My blog"></i></div>-->
+                <div class="overflow-menu__row-title-column">
+                    <a href="{{item.url}}" class="{% if page.url == item.url %} active {% endif %}">{{item.name}}</a>
+                </div>
             </div>
             {% endfor %}
         </div>
-        <!--onclick="$('.overflow-menu').toggleClass('hidden');$('.menu-button').toggleClass('hidden');"-->
     </div>
+    <img class="logo" src="/assets/images/avatar.png">
     <div class="header-left">
-        <!--<a href="#1"><i class="icon-search"></i></a>-->
         {% for item in site.menu %}
-        <a href="{{item.url}}" class="{% if page.url == {{item.url}} %} active {% endif %}">{{item.name}}</a>
+            <a href="{{item.url}}" class="{% if page.url == item.url %}active{% endif %}">
+                {{item.name}}
+            </a>
         {% endfor %}
     </div>
-    <a class="logo" href="/about/"><img src="/assets/images/avatar.png" alt="Avatar"></a>
     <div class="header-right">
-        <a href="{{ "/feed.xml" | relative_url }}"><i><img src="/assets/icons/rss.svg" alt="Подписаться"></i></a>
-        <a href="#1"><i><img src="/assets/icons/github.svg" alt="GitHub"></i></a>
-        <a href="#1"><i><img src="/assets/icons/stack-overflow.svg" alt="SO"></i></a>
-        <a href="#1"><i><img src="/assets/icons/twitter.svg" alt="Twitter"></i></a>
+        <a target="_blank" href="{{ '/feed.xml' | relative_url }}"><i><img src="/assets/icons/rss.svg" alt="Подписаться"></i></a>
+        <a target="_blank" href="https://github.com/{{ site.github_username }}"><i><img src="/assets/icons/github.svg" alt="GitHub"></i></a>
+        <a target="_blank" href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}/?tab=profile"><i><img src="/assets/icons/stack-overflow.svg" alt="SO" height="27px"></i></a>
+        <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><i><img src="/assets/icons/twitter.svg" alt="Twitter"></i></a>
     </div>
 </header>

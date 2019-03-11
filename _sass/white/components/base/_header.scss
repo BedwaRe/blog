@@ -1,3 +1,4 @@
+// Styles for mobile
 header {
   background: $white;
   height: $mobile-header-height;
@@ -10,21 +11,27 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  .header-left, .header-right {
-    flex-basis: 50%;
-    //display: flex;
+  .overflow-menu__row {
+    display: flex;
+    align-items: center;
+
+    .overflow-menu__row-title-column {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+  }
+
+  .logo {
     display: none;
+  }
+
+  .header-left, .header-right {
+    display: none;
+    align-items: center;
   }
 
   .header-left {
     justify-content: flex-start;
-  }
-
-  .logo, .logo img {
-    height: 50px;
-  }
-  .logo {
-    display: none;
   }
 
   .header-right {
@@ -43,10 +50,6 @@ header {
     box-shadow: 0 0 4px #e5e5e5;
   }
 
-  .icon-menu{
-    z-index: 12;
-  }
-
   #burger-menu{
     display: none;
   }
@@ -58,8 +61,9 @@ header {
     right: 0;
     z-index: -2;
     background: white;
-    transition: top 700ms;
-    display: block;
+    transition: top .3s;
+    box-shadow: 0 0 4px #e5e5e5;
+    padding: 10px 10px 30px;
   }
 
   #burger-menu:checked~ .wrapper-menu{
@@ -76,6 +80,11 @@ header {
       display: none;
     }
 
+    .header-right {
+      i {
+        padding: 5px;
+      }
+    }
     .header-right, .header-left {
       display: flex;
     }
@@ -88,12 +97,8 @@ header {
       margin-left: 0;
     }
 
-    .header-right > *:last-child {
+    .header-right > a:last-of-type {
       margin-right: 0;
-    }
-
-    .logo {
-      display: block;
     }
   }
 }
@@ -109,8 +114,24 @@ header {
       height: $desktop-header-height;
     }
 
-    .logo, .logo img {
-      height: 110px;
+    .logo {
+      color: transparent;
+      display: block;
+      //background: url(/assets/images/avatar.png);
+      position: absolute;
+      left: calc(50% - 55px);
+      min-height: 100px;
+      min-width: 100px;
+
+      border: 5px solid $cyan;
+      border-radius: 100px;
+      font-size: 0;
+
+      //background: $purple;
+      //background: -moz-linear-gradient(top, $purple 0%, $cyan 100%);
+      //background: -webkit-linear-gradient(top, $purple 0%,$cyan 100%);
+      //background: linear-gradient(to bottom, $purple 0%,$cyan 100%);
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$cyan,GradientType=0 );
     }
 
     a {

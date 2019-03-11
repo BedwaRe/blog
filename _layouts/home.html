@@ -1,26 +1,26 @@
 ---
 layout: default
 ---
-
+{{content}}
 {%- if site.posts.size > 0 -%}
-
-  {%- for post in site.posts -%}
-
+  {%- for page in site.posts -%}
+    {% unless page.category 'translation' %}
     <div class="post">
       <div class="post-header">
-        <div class="post-header-title">{{ post.title | escape }}</div>
-        {%- assign date_format = site.date_format -%}
-        <div class="post-header-time">{{ post.date | date: date_format }}</div>
+        <h2 class="post-header-title">{{ page.title | escape }}</h2>
+        <div class="post-header-time">
+          {% include date.html %}
+        </div>
       </div>
       <div class="separator"></div>
       {%- if site.show_excerpts -%}
-        <div class="post-content">{{ post.excerpt }}</div>
+        <div class="post-content">{{ page.excerpt }}</div>
       {%- endif -%}
       <div class="post-footer">
-        <a href="{{ post.url | relative_url }}" class="active">Читать дальше</a>
+        <a href="{{ page.url | relative_url }}" class="active">Читать дальше</a>
+        <span>{%- include time.html -%}</span>
       </div>
     </div>
-
+    {% endunless %}
   {%- endfor -%}
-
 {%- endif -%}
