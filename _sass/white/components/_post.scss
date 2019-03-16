@@ -20,6 +20,9 @@
       flex-basis: 100%;
       font-family: $secondary-font;
       font-size: $mobile-post-time-font-size;
+      display: flex;
+      flex-wrap: wrap;
+
       span {
         margin-right: 10px;
       }
