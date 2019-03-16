@@ -26,10 +26,11 @@ layout: default
     {%- if site.disqus_shortname and jekyll.environment == "production" -%}
       <div class="separator"></div>
       <div class="warning">
-        Пожалуйста, используйте
-        <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">подсветку синтаксиса</a>
-        для кода.
+          Пожалуйста, используйте
+          <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">подсветку синтаксиса</a>
+          для кода.
       </div>
+      <div class="separator"></div>
       {%- include disqus_comments.html -%}
     {%- endif -%}
   </div>
