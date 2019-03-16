@@ -56,6 +56,10 @@
   .post-footer {
     margin-top: $desktop-secondary-margin;
 
+    .separator {
+      margin: 20px 0;
+    }
+
     .warning {
       text-align: center;
     }
