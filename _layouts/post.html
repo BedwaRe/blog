@@ -23,7 +23,13 @@ layout: default
     {{ content }}
   </div>
   <div class="post-footer">
-    {%- if site.disqus_shortname -%}
+    {%- if site.disqus_shortname and jekyll.environment == "production" -%}
+      <div class="separator">
+      <div class="warning">
+        Пожалуйста, используйте
+        <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">подсветку синтаксиса</a>
+        для кода.
+      </div>
       {%- include disqus_comments.html -%}
     {%- endif -%}
   </div>

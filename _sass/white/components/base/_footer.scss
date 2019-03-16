@@ -20,6 +20,14 @@ footer {
     z-index: -1;
     box-shadow: 0 0 4px #e5e5e5;
   }
+
+  a {
+    margin: 0 5px;
+
+    img {
+      height: 20px;
+    }
+  }
 }
 
 // Styles for PC

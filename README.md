@@ -1,4 +1,4 @@
-<img src="http://surin.blog/favicon.ico" width="32px" height="32px" />
+<img src="https://surin.blog/favicon.ico" width="32px" height="32px" />
 
 This is my blog: [http://surin.blog](http://surin.blog)
 
