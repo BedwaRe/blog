@@ -5,7 +5,7 @@ const bs = require("browser-sync").create();
 const path = {
     html: ['*.html', '*.md', '_includes/*.html', '_layouts/*.html', '_posts/*.markdown', '_drafts/*.markdown'],
     css: ['_sass/**/*.scss']
-}
+};
 
 task('jekyll:build', (done) => {
     spawn('bundle', ['exec', 'jekyll', 'build'], {
@@ -30,7 +30,7 @@ task('browser-sync', () => {
 });
 
 task('watch', () => {
-    watch(path.html).on('change', series('jekyll:build', bs.reload));
+    watch(path.html).on('change', series('jekyll:build+drafts', bs.reload));
     watch(path.css).on('change', series('jekyll:build', bs.reload));
 });
 

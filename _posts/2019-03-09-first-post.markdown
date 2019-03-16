@@ -23,6 +23,3 @@ tags: beginning
 <center>¯\_(⊙_ʖ⊙)_/¯</center>
 
 Кстати, есть вопросы, предложения или нашли ошибку? Пишите в комментариях, не стесняйтесь)
-[Вот][discus-commentary-guide] какие тэги можно использовать в комментариях.
-
-[discus-commentary-guide]: https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments

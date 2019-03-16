@@ -2,13 +2,11 @@ article.post {
   .post-header .post-header-title {
     font-size: $desktop-post-header-font-size;
   }
-  .post-content {
-    a {
-      font-weight: bold;
-      border-bottom: 1px dashed;
-      &:hover {
-        color: $cyan;
-      }
+  a {
+    font-weight: bold;
+    border-bottom: 1px dashed;
+    &:hover {
+      color: $cyan;
     }
   }
 }
