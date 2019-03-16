@@ -1,6 +1,6 @@
 # General
 title: Пишу о разработке
-author: Dmitry Surin
+author: Дмитрий Сурин
 email: dmitry.surin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Интересное в мире разработки. Чистый код, архитектура, разработка и тестирование.
@@ -14,8 +14,6 @@ excerpt_separator: <!--more-->
 menu:
   - name: Блог
     url: /
-  - name: Переводы
-    url: /translations/
   - name: Обо мне
     url: /about/
 

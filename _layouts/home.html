@@ -4,23 +4,31 @@ layout: default
 {{content}}
 {%- if site.posts.size > 0 -%}
   {%- for page in site.posts -%}
-    {% unless page.category 'translation' %}
-      <div class="post">
-        <div class="post-header">
-          <h2 class="post-header-title">{{ page.title | escape }}</h2>
-          <div class="post-header-time">
-            {% include date.html %}
-          </div>
-        </div>
-        <div class="separator"></div>
-        {%- if site.show_excerpts -%}
-          <div class="post-content">{{ page.excerpt }}</div>
-        {%- endif -%}
-        <div class="post-footer">
-          <a href="{{ page.url | relative_url }}" class="active">Читать дальше</a>
+    <div class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="post-header">
+        <h2 class="post-header-title">
+          <a href="{{ page.url | relative_url }}">
+            {% if page.category == 'translation' %}Перевод: {% endif %}{{ page.title | escape }}
+          </a>
+        </h2>
+        <div class="post-header-time">
+          <span>{%- include date.html -%}</span>
           <span>{%- include time.html -%}</span>
+          {%- if site.disqus_shortname and jekyll.environment == "production" -%}
+            <a href="{{ page.url | relative_url }}#disqus_thread"  itemprop="discussionUrl">комментариев</a>
+          {%- endif -%}
         </div>
       </div>
-    {% endunless %}
+      <div class="separator"></div>
+      {%- if site.show_excerpts -%}
+        <div class="post-content">{{ page.excerpt }}</div>
+      {%- endif -%}
+      <div class="post-footer">
+        <a href="{{ page.url | relative_url }}" class="active">Читать дальше</a>
+      </div>
+    </div>
   {%- endfor -%}
+  {%- if site.disqus_shortname and jekyll.environment == "production" -%}
+    <script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
+  {%- endif -%}
 {%- endif -%}

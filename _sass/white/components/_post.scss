@@ -17,8 +17,12 @@
       margin: 0 10px 10px 0;
     }
     .post-header-time {
+      flex-basis: 100%;
       font-family: $secondary-font;
       font-size: $mobile-post-time-font-size;
+      span {
+        margin-right: 10px;
+      }
     }
     .post-header-author {
       flex-basis: 100%;
