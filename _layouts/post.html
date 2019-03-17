@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="post-header">
-    <h1 class="post-header-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-header-title" itemprop="name headline">{% if page.category == 'translation' %}Перевод: {% endif %}{{ page.title | escape }}</h1>
     <time class="post-header-time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {%- include date.html -%}
     </time>

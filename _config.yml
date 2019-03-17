@@ -11,17 +11,6 @@ encoding: utf-8
 show_excerpts: true
 excerpt_separator: <!--more-->
 
-menu:
-  - name: Блог
-    url: /
-  - name: Обо мне
-    url: /about/
-
-# Links
-twitter_username: BedwaRe
-github_username: bedware
-stackoverflow_id: 8413677
-
 # Build settings
 markdown: kramdown
 plugins:
@@ -43,3 +32,28 @@ exclude:
   - Gemfile.lock
   - LICENSE.txt
   - README.md
+
+# Header #
+
+# Menu
+menu:
+  - name: Блог
+    url: /
+
+# Social links
+links:
+  - ico: /assets/icons/telegram.svg
+    url: https://tele.gg/surinblog
+  - ico: /assets/icons/rss.svg
+    url: /feed.xml
+  - ico: /assets/icons/github.svg
+    url: https://github.com/bedware
+  - ico: /assets/icons/stack-overflow.svg
+    url: https://stackoverflow.com/users/8413677/?tab=profile
+  - ico: /assets/icons/twitter.svg
+    url: https://twitter.com/BedwaRe/
+
+# Footer #
+
+# Services
+github_username: bedware

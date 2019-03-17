@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Первый)"
-tags: beginning
+tags: начало
 ---
 Привет, **%username%**!
 

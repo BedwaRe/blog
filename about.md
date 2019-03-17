@@ -2,6 +2,7 @@
 layout: post
 title: Обо мне
 permalink: /about/
+date:   2019-03-01 05:17:09 +0300
 description: |
     Описание для странички обо мне
 ---

@@ -1,104 +1,123 @@
-// Styles for mobile
+// Shared styles
 header {
+  display: flex;
+  align-items: center;
+
   background: $white;
-  height: $mobile-header-height;
   padding: 0 $mobile-default-margin;
-  z-index: 1;
   width: 100%;
   box-sizing: border-box;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .overflow-menu__row {
+  .logo {
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    .overflow-menu__row-title-column {
-      font-size: 1.5rem;
-      padding: 10px;
+    min-height: 110px;
+    min-width: 110px;
+
+    border-radius: 55px;
+
+    background: $purple;
+    background: -moz-linear-gradient(top, $purple 0%, $cyan 100%);
+    background: -webkit-linear-gradient(top, $purple 0%,$cyan 100%);
+    background: linear-gradient(to bottom, $purple 0%,$cyan 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$cyan,GradientType=0 );
+
+    &:hover {
+      background: $cyan;
     }
   }
 
-  .logo {
+  #menu-trigger {
     display: none;
   }
-
-  .header-left, .header-right {
-    display: none;
+  .menu {
+    display: flex;
     align-items: center;
-  }
-
-  .header-left {
-    justify-content: flex-start;
-  }
-
-  .header-right {
-    justify-content: flex-end;
-  }
-
-  &:before {
-    content: "";
-    height: $mobile-header-height;
     width: 100%;
-    display: block;
-    background: $white;
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    box-shadow: 0 0 4px #e5e5e5;
-  }
 
-  #burger-menu{
-    display: none;
-  }
-
-  .wrapper-menu{
-    position: absolute;
-    top: -200px;
-    left: 0;
-    right: 0;
-    z-index: -2;
-    background: white;
-    transition: top .3s;
-    box-shadow: 0 0 4px #e5e5e5;
-    padding: 10px 10px 30px;
-  }
-
-  #burger-menu:checked~ .wrapper-menu{
-    top: 60px;
+    i {
+      padding: 5px;
+    }
   }
 }
 
+// Styles for Mobile
+@media all and (max-width: $breakpoint-sm) {
+  header {
+    font-size: 2rem;
+    flex-direction: column;
+  }
+  label {
+    height: $mobile-header-height;
 
-/* MEDIA */
+    i {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+    }
+  }
+  .stretched-row {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  #menu-trigger {
+    &:checked ~ * {
+      display: none;
+    }
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    & > * {
+      margin: 30px 0;
+    }
+  }
+}
+
 // Styles for tablet
 @media all and (min-width: $breakpoint-sm) {
   header {
-    .menu-button{
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    &:before {
+      content: "";
+      height: $mobile-header-height;
+      width: 100%;
+      display: block;
+      background: $white;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      box-shadow: 0 0 4px #e5e5e5;
+    }
+    label {
       display: none;
     }
+    .logo {
+      min-height: 55px;
+      min-width: 55px;
 
-    .header-right {
-      i {
-        padding: 5px;
+      margin: 0;
+
+      img {
+        height: 50px;
+        width: 50px
       }
     }
-    .header-right, .header-left {
-      display: flex;
-    }
+    .menu {
+      flex-basis: 100%;
+      margin-left: 40px;
+      justify-content: space-between;
 
-    .header-left > *, .header-right > * {
-      margin: 0 10px;
-    }
-
-    .header-left > a:first-of-type {
-      margin-left: 0;
-    }
-
-    .header-right > a:last-of-type {
-      margin-right: 0;
+      .stretched-row {
+        flex-basis: initial;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -109,31 +128,20 @@ header {
     height: $desktop-header-height;
     max-width: $content-width;
     padding: 0 $desktop-default-margin;
+    font-size: 1.2rem;
 
     &:before {
       height: $desktop-header-height;
     }
-
     .logo {
-      color: transparent;
-      display: block;
-      //background: url(/assets/images/avatar.png);
-      position: absolute;
-      left: calc(50% - 55px);
-      min-height: 100px;
-      min-width: 100px;
+      min-height: 110px;
+      min-width: 110px;
 
-      border: 5px solid $cyan;
-      border-radius: 100px;
-      font-size: 0;
-
-      //background: $purple;
-      //background: -moz-linear-gradient(top, $purple 0%, $cyan 100%);
-      //background: -webkit-linear-gradient(top, $purple 0%,$cyan 100%);
-      //background: linear-gradient(to bottom, $purple 0%,$cyan 100%);
-      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$cyan,GradientType=0 );
+      img {
+        height: initial;
+        width: initial;
+      }
     }
-
     a {
       font-size: $desktop-header-link-height;
     }
