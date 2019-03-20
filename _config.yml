@@ -15,6 +15,7 @@ excerpt_separator: <!--more-->
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Plugins
 google_analytics: UA-134200140-1
