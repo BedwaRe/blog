@@ -1,24 +1,23 @@
 const { task, watch, series, parallel } = require('gulp');
-const { spawn } = require('child_process');
+const { exec } = require('child_process');
 const bs = require("browser-sync").create();
 
-const path = {
-    html: ['*.html', '*.md', '_includes/*.html', '_layouts/*.html', '_posts/*.markdown', '_drafts/*.markdown'],
-    css: ['_sass/**/*.scss']
-};
+const path = ['_layouts/*.html', '_includes/*.html', '**/*.markdown', '_sass/**/*.scss'];
 
 task('jekyll:build', (done) => {
-    spawn('bundle', ['exec', 'jekyll', 'build'], {
-        shell: true,
-        stdio: 'inherit'
-    }).on('close', done);
-});
-
-task('jekyll:build+drafts', (done) => {
-    spawn('bundle', ['exec', 'jekyll', 'build', '--drafts'], {
-        shell: true,
-        stdio: 'inherit'
-    }).on('close', done);
+    exec('docker run -p 80:4000 -v %cd%:/srv/jekyll -v jekyll_cache:/usr/local/bundle --env JEKYLL_ENV=development --name jekyll-serve -i --rm jekyll/builder:3.8 jekyll build --drafts',
+        (error, stdout, stderr) => {
+            if (stdout) {
+                console.log(stdout);
+            }
+            if (stderr) {
+                console.log(stderr);
+            }
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+            done();
+        });
 });
 
 task('browser-sync', () => {
@@ -30,9 +29,7 @@ task('browser-sync', () => {
 });
 
 task('watch', () => {
-    watch(path.html).on('change', series('jekyll:build+drafts', bs.reload));
-    watch(path.css).on('change', series('jekyll:build', bs.reload));
+    watch(path).on('change', series('jekyll:build', bs.reload));
 });
 
 task('serve', series('jekyll:build', parallel('browser-sync', 'watch')));
-task('served', series('jekyll:build+drafts', parallel('browser-sync', 'watch')));
