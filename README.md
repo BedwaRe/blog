@@ -2,6 +2,11 @@
 
 This is my blog: [http://surin.blog](http://surin.blog)
 
+Command for build (Windows env):
+```
+docker run --rm -v %cd%:/srv/jekyll -v jekyll_cache:/usr/local/bundle -e JEKYLL_ENV=development -p 80:4000 -it jekyll/builder:3.8 jekyll serve
+```
+
 ## License
 
 Copyright (c) 2019 Dmitry Surin
