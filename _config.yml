@@ -4,7 +4,7 @@ author: Дмитрий Сурин
 email: dmitry.surin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Интересное в мире разработки. Чистый код, архитектура, разработка и тестирование.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://surin.blog"
 permalink: /:categories/:year/:title/
 encoding: utf-8
