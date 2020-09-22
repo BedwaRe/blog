@@ -3,7 +3,7 @@
         <i class="icon-menu"></i>
     </label>
     <input type="checkbox" id="menu-trigger" checked>
-    <a class="logo" href="/about"><img src="{{ '/assets/images/avatar.png' }}"></a>
+    <a class="logo" href="{{ '/about' | relative_url }}"><img src="{{ '/assets/images/avatar.png' | relative_url }}"></a>
     <div class="menu">
         {% for item in site.menu %}
             <div class="stretched-row">
