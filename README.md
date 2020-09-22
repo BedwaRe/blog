@@ -1,4 +1,4 @@
-<img src="https://bedware.github.io/blog/assets/favicon.ico" width="32px" height="32px" />
+<img src="https://bedware.github.io/blog/favicon.ico" width="32px" height="32px" />
 
 This is my blog: [http://surin.blog](http://surin.blog)
 
