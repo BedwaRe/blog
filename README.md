@@ -1,7 +1,5 @@
 <img src="https://bedware.github.io/blog/favicon.ico" width="32px" height="32px" />
 
-This is my blog: [https://bedware.github.io/blog/](https://bedware.github.io/blog/)
-
 Command for build (Windows env):
 ```
 docker run --rm -v %cd%:/srv/jekyll -v jekyll_cache:/usr/local/bundle -e JEKYLL_ENV=development -p 80:4000 -it jekyll/builder:3.8 jekyll serve
