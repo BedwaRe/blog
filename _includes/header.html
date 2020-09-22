@@ -11,7 +11,7 @@
             </div>
         {% endfor %}
         {% for item in site.links %}
-            <a target="_blank" href="{{ item.url | relative_url }}"><i><img src="{{item.ico}}"></i></a>
+            <a target="_blank" href="{{ item.url | relative_url }}"><i><img src="{{ item.ico | relative_url }}"></i></a>
         {% endfor %}
     </div>
 </header>
