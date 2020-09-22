@@ -12,9 +12,9 @@ i {
 }
 
 i.icon-search {
-  background: url({{ '/assets/icons/search.svg' | relative_url }}) content-box;
+  background: url(/blog/assets/icons/search.svg) content-box;
 }
 
 i.icon-menu {
-  background: url({{ '/assets/icons/menu.svg' | relative_url }}) content-box;
+  background: url(/blog/assets/icons/menu.svg) content-box;
 }
