@@ -43,15 +43,15 @@ menu:
 
 # Social links
 links:
-  - ico: /blog/assets/icons/telegram.svg
+  - ico: /assets/icons/telegram.svg
     url: https://tele.gg/surinblog
-  - ico: /blog/assets/icons/rss.svg
+  - ico: /assets/icons/rss.svg
     url: /feed.xml
-  - ico: /blog/assets/icons/github.svg
+  - ico: /assets/icons/github.svg
     url: https://github.com/bedware
-  - ico: /blog/assets/icons/stack-overflow.svg
+  - ico: /assets/icons/stack-overflow.svg
     url: https://stackoverflow.com/users/8413677/?tab=profile
-  - ico: /blog/assets/icons/twitter.svg
+  - ico: /assets/icons/twitter.svg
     url: https://twitter.com/BedwaRe/
 
 # Footer #
